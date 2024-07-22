@@ -34,7 +34,7 @@ namespace Calendar.UserControls
             set { SetValue(ColorProperty, value); }
         }
 
-        public static readonly DependencyProperty ColorProperty = DependencyProperty.Register("Color", typeof(string), typeof(Item));
+        public static readonly DependencyProperty ColorProperty = DependencyProperty.Register("Color", typeof(SolidColorBrush), typeof(Item));
 
         public FontAwesome.WPF.FontAwesomeIcon Icon
         {
@@ -42,7 +42,7 @@ namespace Calendar.UserControls
             set { SetValue(IconProperty, value); }
         }
 
-        public static readonly DependencyProperty IconProperty = DependencyProperty.Register("Icon", typeof(string), typeof(Item));
+        public static readonly DependencyProperty IconProperty = DependencyProperty.Register("Icon", typeof(FontAwesome.WPF.FontAwesomeIcon), typeof(Item));
 
         public FontAwesome.WPF.FontAwesomeIcon IconBell
         {
@@ -50,7 +50,7 @@ namespace Calendar.UserControls
             set { SetValue(IconBellProperty, value); }
         }
 
-        public static readonly DependencyProperty IconBellProperty = DependencyProperty.Register("IconBell", typeof(string), typeof(Item));
+        public static readonly DependencyProperty IconBellProperty = DependencyProperty.Register("IconBell", typeof(FontAwesome.WPF.FontAwesomeIcon), typeof(Item));
 
     }
 }
