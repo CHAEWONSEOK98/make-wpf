@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using KakaoTalk.ViewModels;
+using System.Windows;
 
 
 namespace KakaoTalk.Views
@@ -8,6 +9,7 @@ namespace KakaoTalk.Views
         public MainView()
         {
             InitializeComponent();
+            DataContext = App.Current.Services.GetService(typeof(MainViewModel));
         }
     }
 }

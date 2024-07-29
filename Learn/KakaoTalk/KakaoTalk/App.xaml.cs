@@ -1,4 +1,5 @@
-﻿using KakaoTalk.Views;
+﻿using KakaoTalk.ViewModels;
+using KakaoTalk.Views;
 using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;
 using System.Data;
@@ -27,6 +28,12 @@ namespace KakaoTalk
         private static IServiceProvider ConfigureServices()
         {
             var services = new ServiceCollection();
+
+            // ViewModels
+            services.AddTransient<MainViewModel>();
+            services.AddTransient<LoginControlViewModel>();
+            services.AddTransient<SignupControlViewModel>();
+            services.AddTransient<ChangePwdControlViewModel>();
 
             // Service
             // services.AddSingleton<ITestService, TestService>();
