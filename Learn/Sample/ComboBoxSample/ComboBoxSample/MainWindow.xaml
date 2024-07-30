@@ -8,6 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <TextBlock Text="ComboBox"/>
-        <ComboBox x:Name="cmb" IsEditable="True" Background="Red" Margin="5 0"/>
+        <ComboBox x:Name="cmb"
+                  IsEditable="True"
+                  Margin="5 0"
+                  local:ComboBoxBackgroundManager.Background="Green"/>
     </StackPanel>
 </Window>

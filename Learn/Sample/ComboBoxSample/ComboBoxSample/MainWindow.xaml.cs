@@ -15,7 +15,7 @@ namespace ComboBoxSample
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            cmb.SetBackground(Brushes.Yellow);
+            //cmb.SetBackground(Brushes.Yellow);
         }
     }
 }
