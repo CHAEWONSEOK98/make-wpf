@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfCommand.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCommand"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--Sample1-->
+    <!--<Window.CommandBindings>
+        <CommandBinding Command="local:MyCommand.Hello" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed"/>
+    </Window.CommandBindings>-->
+
+    <Window.CommandBindings>
+        <CommandBinding Command="Open" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed"/>
+    </Window.CommandBindings>
+    <Grid>
+        <!--Sample1-->
+        <!--<Menu VerticalAlignment="Top" Height="25">
+            <MenuItem Header="File" Height="25">
+                <MenuItem CommandParameter="james" Command="local:MyCommand.Hello"/>
+            </MenuItem>
+        </Menu>-->
+
+        <!--Sample2-->
+        <!--<TextBox x:Name="text" Height="25" Width="200" />
+        <Button Content="Paste Button" CommandTarget="{Binding ElementName=text}" Command="Paste" Height="25" Width="200"  Margin="0 100 0 0"/>
+        <Button Content="Copy Button" CommandTarget="{Binding ElementName=text}" Command="Copy" Height="25" Width="200" Margin="0 170 0 0"/>-->
+
+        <local:CommandButton CommandParameter="Hi Chaegyul" Command="Open" Height="25" Width="200"/>
+    </Grid>
+</Window>
