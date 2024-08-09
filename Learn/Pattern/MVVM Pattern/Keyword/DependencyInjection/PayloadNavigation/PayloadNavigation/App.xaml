@@ -1,0 +1,17 @@
+﻿<Application x:Class="PayloadNavigation.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PayloadNavigation"
+             xmlns:viewModel="clr-namespace:PayloadNavigation.MVVM.ViewModels"
+             xmlns:view="clr-namespace:PayloadNavigation.MVVM.Views">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type TypeName=viewModel:HomeViewModel}">
+            <view:HomeView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type TypeName=viewModel:SettingViewModel}">
+            <view:SettingView/>
+        </DataTemplate>
+
+    </Application.Resources>
+</Application>
