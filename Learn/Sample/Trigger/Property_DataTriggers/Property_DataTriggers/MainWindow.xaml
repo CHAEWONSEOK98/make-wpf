@@ -18,6 +18,23 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Button x:Name="BTN" Content="EvenTrigger" FontSize="30">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="CornflowerBlue"
+                                            Duration="0:0:2"
+                                            Storyboard.TargetProperty="Background.Color"/>
+                            <ColorAnimation To="Red"
+                                            Duration="0:0:0"
+                                            Storyboard.TargetProperty="Foreground.Color"
+                                            Storyboard.TargetName="CBX1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
         <Ellipse Grid.Column="1" Grid.Row="0"
                  Height="90" Width="90">
             <Ellipse.Style>
