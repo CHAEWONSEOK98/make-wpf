@@ -8,8 +8,20 @@ namespace XMLDemoApp
         {
             //CreateXMLFile();
             //AddRecordToXML();
-            ReadRecords();
+            //ReadRecords();
+            UpdateRecord();
             Console.ReadLine();
+        }
+
+        static void UpdateRecord()
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"C:\\Users\\7dugo\\Desktop\\make-wpf\\C#\\File\\XMLDemoApp\\XMLDemoApp\\movies.xml");
+            XmlNode targetNode = doc.SelectSingleNode("MOVIES/MOVIE[@id=1]/TITLE");
+            targetNode.InnerText = "Goodfellas";
+
+            doc.Save(@"C:\\Users\\7dugo\\Desktop\\make-wpf\\C#\\File\\XMLDemoApp\\XMLDemoApp\\movies.xml");
+            Console.WriteLine(doc.InnerXml);
         }
 
         static void ReadRecords()
