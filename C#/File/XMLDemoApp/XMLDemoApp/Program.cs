@@ -6,9 +6,21 @@ namespace XMLDemoApp
     {
         static void Main(string[] args)
         {
-            AddRecordToXML();
             //CreateXMLFile();
+            //AddRecordToXML();
+            ReadRecords();
             Console.ReadLine();
+        }
+
+        static void ReadRecords()
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"C:\\Users\\7dugo\\Desktop\\make-wpf\\C#\\File\\XMLDemoApp\\XMLDemoApp\\movies.xml");
+            XmlNodeList nodes = doc.SelectNodes("MOVIES/MOVIE");
+            foreach (XmlNode node in nodes)
+            {
+                Console.WriteLine($"{node.Attributes[0].Value} {node.ChildNodes[0].InnerText}");
+            }
         }
 
         static void AddRecordToXML()
