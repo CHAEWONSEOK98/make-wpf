@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MOVIES>
+  <MOVIE id="1">
+    <TITLE>Star Wars</TITLE>
+  </MOVIE>
+  <MOVIE id="2">
+    <TITLE>Avatar</TITLE>
+  </MOVIE>
+  <MOVIE id="3">
+    <TITLE>Scarface</TITLE>
+  </MOVIE>
+</MOVIES>
