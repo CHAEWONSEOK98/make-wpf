@@ -9,8 +9,28 @@ namespace XMLDemoApp
             //CreateXMLFile();
             //AddRecordToXML();
             //ReadRecords();
-            UpdateRecord();
+            //UpdateRecord();
+            DeleteRecord();
             Console.ReadLine();
+        }
+
+        static void DeleteRecord()
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"C:\\Users\\7dugo\\Desktop\\make-wpf\\C#\\File\\XMLDemoApp\\XMLDemoApp\\movies.xml");
+
+            Console.WriteLine($"File Loaded..\n{doc.InnerXml}");
+
+            var root = doc.SelectSingleNode("MOVIES");
+            Console.WriteLine($"Root Node\n{root.InnerXml}");
+
+            var targetNode = root.SelectSingleNode("MOVIE[@id=3]");
+            Console.WriteLine($"Target Node: {targetNode.InnerXml}");
+
+            root.RemoveChild(targetNode);
+            Console.WriteLine($"Child Deleted...\n{doc.InnerXml}");
+
+            doc.Save(@"C:\\Users\\7dugo\\Desktop\\make-wpf\\C#\\File\\XMLDemoApp\\XMLDemoApp\\movies.xml");
         }
 
         static void UpdateRecord()
