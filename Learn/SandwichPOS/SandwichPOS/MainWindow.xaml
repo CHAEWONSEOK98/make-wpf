@@ -1,0 +1,171 @@
+﻿<Window x:Class="SandwichPOS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SandwichPOS"
+        mc:Ignorable="d"
+        Title="Sandwich POS" WindowStartupLocation="CenterScreen"
+        Height="450" Width="800">
+    <Window.DataContext>
+        <Binding RelativeSource="{RelativeSource Self}"/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ListBox x:Name="lbxORDER" FontSize="18"
+                     HorizontalContentAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding name}"
+                                       Grid.Column="0"/>
+                            <TextBlock Text="{Binding price}"
+                                       Grid.Column="1"
+                                       TextAlignment="Right"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <TextBlock x:Name="tblTOTAL" Grid.Row="1"
+                       FontSize="24" TextAlignment="Right"
+                       Text="$0.00"/>
+        </Grid>
+
+        <TabControl Grid.Column="1">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock Text="$"
+                                   TextAlignment="Center"
+                                   FontSize="28"/>
+                        <TextBlock Text="Payment"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <StackPanel>
+                    <TextBlock Text="Amount Due" FontSize="32"
+                               HorizontalAlignment="Center"
+                               Margin="5"/>
+                    <TextBlock FontSize="32" Margin="5"
+                               Text="{Binding ElementName=tblTOTAL, Path=Text}"
+                               TextAlignment="Center"/>
+                    <TextBox x:Name="tbxTENDER" FontSize="32"
+                             Width="200" TextAlignment="Center"
+                             Margin="5"/>
+                    <Button x:Name="btnTENDER" Content="TENDER"
+                            Width="200" FontSize="32"
+                            Margin="5"
+                            Click="btnTENDER_Click"/>
+                    <Button x:Name="btnCLEAR" Content="CLEAR"
+                            Width="200" FontSize="32"
+                            Margin="5"
+                            Click="btnCLEAR_Click"/>
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Name="TB1">
+                <TabItem.Header>
+                    <StackPanel>
+                        <Image Source="Images/cheese.png" Height="30"/>
+                        <TextBlock Text="Cheese"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <ListView x:Name="lvwCHEESE"
+               ItemsSource="{Binding CheeseList}">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <CheckBox Padding="5">
+                                <StackPanel>
+                                    <Image Source="{Binding img}"
+                            Height="50"
+                            HorizontalAlignment="Left"/>
+                                    <TextBlock Text="{Binding name}"
+                                FontSize="22"/>
+                                </StackPanel>
+                            </CheckBox>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </TabItem>
+
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <Image Source="Images/lettuce.png" Height="30"/>
+                        <TextBlock Text="Veggie"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <ListView x:Name="lvwVEGGIE"
+                          ItemsSource="{Binding VeggieList}">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <CheckBox Padding="5">
+                                <StackPanel>
+                                    <Image Source="{Binding img}"
+                                       Height="50"
+                                       HorizontalAlignment="Left"/>
+                                    <TextBlock Text="{Binding name}"
+                                           FontSize="22"/>
+                                </StackPanel>
+                            </CheckBox>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </TabItem>
+            
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <Image Source="Images/KoreaSandwich.png" Height="30"/>
+                        <TextBlock Text="Sandwich"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <ListView x:Name="lvwSANDWICH"
+                          ItemsSource="{Binding SandwichList}">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Button Padding="5" Click="Button_Click">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding name}"
+                                           FontSize="18"/>
+                                    <Image Source="{Binding img}"
+                                       Height="50"
+                                       HorizontalAlignment="Left"/>
+                                    <TextBlock Text="{Binding price}"
+                                           FontSize="22"/>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
