@@ -1,5 +1,7 @@
 ﻿using System.IO;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace WpfCustomDataGrid
 {
@@ -9,11 +11,95 @@ namespace WpfCustomDataGrid
         {
             InitializeComponent();
         }
+        const string file = @"C:\Users\7dugo\Desktop\images\DataGrid\Songs.csv";
+
+        #region DataGrid CRUD Events
+        // Add, Update Event
+        private void GRD_RowEditEnding(object sender, System.Windows.Controls.DataGridRowEditEndingEventArgs e)
+        {
+            Song newsong = e.Row.DataContext as Song;
+            var numOfSongsInFile = File.ReadAllLines(file).Length;
+            if (numOfSongsInFile < Songs.SongList.Count)
+            {
+                AddNewSong(newsong);
+            }
+            else
+            {
+                UpdateSong();
+            }
+        }
+
+        // Delete Event
+        private void GRD_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            var source = e.OriginalSource.GetType().Name;
+            if (e.Key == Key.Delete && source == "DataGridCell")
+            {
+                var song = GRD.SelectedItem as Song;
+                var result = MessageBox.Show("Are You Sure?", "Delete Song", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
+                if (result == MessageBoxResult.Yes)
+                {
+                    DeleteSong(song);
+                }
+            }
+        }
+        #endregion
+
+        #region DataGrid CRUD Method
+        void AddNewSong(Song s)
+        {
+            File.AppendAllText(file, $"\n{s.Id},{s.Title},{s.Genre},{s.Artist},{s.MovieTitle},{s.ReleaseYear.Year},{s.URL}");
+        }
+
+        void UpdateSong()
+        {
+            string lines = "";
+            foreach (var s in Songs.SongList)
+            {
+                lines += $"{s.Id},{s.Title},{s.Genre},{s.Artist},{s.MovieTitle},{s.ReleaseYear.Year},{s.URL}\n";
+            }
+            File.WriteAllText(file, lines);
+        }
+
+        void DeleteSong(Song song)
+        {
+            string lines = "";
+            foreach (var s in Songs.SongList)
+            {
+                if (s.Id != song.Id)
+                {
+                    lines += $"{s.Id},{s.Title},{s.Genre},{s.Artist},{s.MovieTitle},{s.ReleaseYear.Year},{s.URL}\n";
+                }
+            }
+            File.WriteAllText(file, lines);
+        }
+
+        #endregion
+
+        // DataGrid Filter Event
+        private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            var tbx = sender as TextBox;
+            if(tbx.Text != "")
+            {
+                var filteredList = Songs.SongList.Where(x => x.Title.ToLower().Contains(tbx.Text.ToLower()));
+                GRD.ItemsSource = null;
+                GRD.ItemsSource = filteredList;
+            }
+        }
+
+        // DataGrid Create Event
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DataGrid dg = new DataGrid();
+            dg.ItemsSource = Songs.SongList;
+            STKPNL.Children.Add(dg);
+        }
     }
 
     public class Songs
     {
-        public List<Song> SongList { get; set; } = GetSongs();
+        public static List<Song> SongList { get; set; } = GetSongs();
         public static List<Song> GetSongs()
         {
             var file = @"C:\Users\7dugo\Desktop\images\DataGrid\Songs.csv";
