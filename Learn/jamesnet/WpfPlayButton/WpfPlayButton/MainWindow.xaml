@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfPlayButton.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPlayButton"
+        mc:Ignorable="d"
+        Background="#191919"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ToggleButton/>
+
+        <!--<Polygon Points="0, 0 100, 0 120, 15 100, 30 0, 30 10, 15" Fill="AliceBlue"/>-->
+    </Grid>
+</Window>
