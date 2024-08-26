@@ -1,0 +1,30 @@
+﻿<Window x:Class="DependencyPropertyBasic.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DependencyPropertyBasic"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <local:CalculateControl Value1="{Binding Value1}" Operator="{Binding Operator}" Value2="{Binding Value2}" DesignMode="White"/>
+    </Grid>
+    <!--
+    Dependency Property (의존성 속성)
+    
+    일반적인 CLR 프로퍼티는 값을 저장하고 반환하는 역할만 하지만,
+    Dependency Property는 값을 저장하는 데에 추가적인 메모리 공간을 사용하여,
+    속성 값의 변화에 대한 알림(Notification)을 보내고,
+    상속(Inheritance)과 스타일(Style) 등의 기능을 지원한다
+    
+    Dependency Property를 사용하는 경우
+    - Data Binding: UI 요소의 속성 값을 다른 UI요소나 데이터 소스와 바인딩
+    - 스타일과 템플릿: 스타일과 템플릿을 사용하여 UI요소의 모양과 동작 변경
+    - 상속: 상위 요소에서 정의된 속성 값을 하위 요소에서 사용할 수 있다.
+    
+    요약: Binding이 가능한 사용자 정의 속성을 만드는 것
+    -->
+</Window>
+
+    
+
