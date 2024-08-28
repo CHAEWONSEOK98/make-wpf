@@ -1,6 +1,6 @@
 # make-wpf
 
-## WPF Stduy
+## WPF Study
 
 **Content**
 
@@ -17,3 +17,10 @@
 - [ ] 11. AutoGrid.Core
 - [ ] 12. CommunityToolkit
 - [ ] 13. NugetPackage
+
+## 1. Button
+- Content -> 내용
+
+## 2. ControlTemplate
+- Template -> ControlTemplate
+- ControlTemplate -> TargetType
