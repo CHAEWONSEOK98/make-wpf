@@ -9,6 +9,8 @@ using KakaoStudy.Login.Local.ViewModels;
 using KakaoStudy.Login.UI.Views;
 using KakaoStudy.Main.Local.ViewModels;
 using KakaoStudy.Main.UI.Views;
+using KakaoStudy.More.Local.ViewModels;
+using KakaoStudy.More.UI.Views;
 
 namespace KakaoStudy.Settings
 {
@@ -26,6 +28,7 @@ namespace KakaoStudy.Settings
             items.Register<MainContent, MainContentViewModel>();
             items.Register<FriendsContent, FriendsContentViewModel>();
             items.Register<ChatsContent, ChatsContentViewModel>();
+            items.Register<MoreContent, MoreContentViewModel>();
         }
     }
 }

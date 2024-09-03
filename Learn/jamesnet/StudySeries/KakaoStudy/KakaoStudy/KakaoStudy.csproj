@@ -19,6 +19,7 @@
     <ProjectReference Include="..\KakaoStudy.Friends\KakaoStudy.Friends.csproj" />
     <ProjectReference Include="..\KakaoStudy.Login\KakaoStudy.Login.csproj" />
     <ProjectReference Include="..\KakaoStudy.Main\KakaoStudy.Main.csproj" />
+    <ProjectReference Include="..\KakaoStudy.More\KakaoStudy.More.csproj" />
   </ItemGroup>
 
 </Project>

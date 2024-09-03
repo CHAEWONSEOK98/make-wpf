@@ -17,6 +17,9 @@ namespace KakaoStudy.Main.Local.ViewModels
         [ObservableProperty]
         private List<MenuModel> _menus;
 
+        [ObservableProperty]
+        private MenuModel _menu;
+
         public MainContentViewModel(IRegionManager regionManager, IContainerProvider containerProvider)
         {
             _regionManager = regionManager;
@@ -28,38 +31,50 @@ namespace KakaoStudy.Main.Local.ViewModels
         private List<MenuModel> GetMenus()
         {
             List<MenuModel> source = new();
-            source.Add(new MenuModel().DataGetn("Chats"));
-            source.Add(new MenuModel().DataGetn("Friends"));
-            source.Add(new MenuModel().DataGetn("More"));
+            source.Add(new MenuModel().DataGetn(ContentNameManager.Chats));
+            source.Add(new MenuModel().DataGetn(ContentNameManager.Friends));
+            source.Add(new MenuModel().DataGetn(ContentNameManager.More));
 
             return source;
         }
 
-        [RelayCommand]
-        private void Chats()
+        partial void OnMenuChanged(MenuModel value)
         {
             IRegion contentRegion = _regionManager.Regions[RegionNameManager.ContentRegion];
-            IViewable ChatsContent = _containerProvider.Resolve<IViewable>(ContentNameManager.Chats);
+            IViewable content = _containerProvider.Resolve<IViewable>(value.Id);
 
-            if (!contentRegion.Views.Contains(ChatsContent))
+            if (!contentRegion.Views.Contains(content))
             {
-                contentRegion.Add(ChatsContent);
+                contentRegion.Add(content);
             }
-            contentRegion.Activate(ChatsContent);
+            contentRegion.Activate(content);
         }
 
-        [RelayCommand]
-        private void Friends()
-        {
-            IRegion contentRegion = _regionManager.Regions[RegionNameManager.ContentRegion];
-            IViewable friendsContent = _containerProvider.Resolve<IViewable>(ContentNameManager.Friends);
+        //[RelayCommand]
+        //private void Chats()
+        //{
+        //    IRegion contentRegion = _regionManager.Regions[RegionNameManager.ContentRegion];
+        //    IViewable ChatsContent = _containerProvider.Resolve<IViewable>(ContentNameManager.Chats);
 
-            if (!contentRegion.Views.Contains(friendsContent))
-            {
-                contentRegion.Add(friendsContent);
-            }
-            contentRegion.Activate(friendsContent);
-        }
+        //    if (!contentRegion.Views.Contains(ChatsContent))
+        //    {
+        //        contentRegion.Add(ChatsContent);
+        //    }
+        //    contentRegion.Activate(ChatsContent);
+        //}
+
+        //[RelayCommand]
+        //private void Friends()
+        //{
+        //    IRegion contentRegion = _regionManager.Regions[RegionNameManager.ContentRegion];
+        //    IViewable friendsContent = _containerProvider.Resolve<IViewable>(ContentNameManager.Friends);
+
+        //    if (!contentRegion.Views.Contains(friendsContent))
+        //    {
+        //        contentRegion.Add(friendsContent);
+        //    }
+        //    contentRegion.Activate(friendsContent);
+        //}
 
         [RelayCommand]
         private void Logout()

@@ -4,6 +4,7 @@ using KakaoStudy.Core.Names;
 using KakaoStudy.Friends.UI.Views;
 using KakaoStudy.Login.UI.Views;
 using KakaoStudy.Main.UI.Views;
+using KakaoStudy.More.UI.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 
@@ -40,6 +41,7 @@ namespace KakaoStudy.Settings
             containerRegistry.RegisterSingleton<IViewable, MainContent>(ContentNameManager.Main);
             containerRegistry.RegisterSingleton<IViewable, FriendsContent>(ContentNameManager.Friends);
             containerRegistry.RegisterSingleton<IViewable, ChatsContent>(ContentNameManager.Chats);
+            containerRegistry.RegisterSingleton<IViewable, MoreContent>(ContentNameManager.More);
         }
     }
 }
