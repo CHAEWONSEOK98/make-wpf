@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.Chats", "KakaoSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.More", "KakaoStudy.More\KakaoStudy.More.csproj", "{F4A4AFE9-E566-4E20-822D-3B469ED95F65}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{7975515B-02BB-497A-8F18-E5254F0B446D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.LayoutSupport", "KakaoStudy.LayoutSupport\KakaoStudy.LayoutSupport.csproj", "{80A305AB-6FF9-41EA-A4F6-10558423F9AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,10 @@ Global
 		{F4A4AFE9-E566-4E20-822D-3B469ED95F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4A4AFE9-E566-4E20-822D-3B469ED95F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4A4AFE9-E566-4E20-822D-3B469ED95F65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A305AB-6FF9-41EA-A4F6-10558423F9AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A305AB-6FF9-41EA-A4F6-10558423F9AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A305AB-6FF9-41EA-A4F6-10558423F9AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A305AB-6FF9-41EA-A4F6-10558423F9AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +84,7 @@ Global
 		{F21AAB26-BBB3-45BC-9ED5-2742F59BA3FA} = {FD130E39-1313-45CF-AA46-264869F9489A}
 		{AED20BFE-367F-4486-95CC-ECC672E52B9C} = {FD130E39-1313-45CF-AA46-264869F9489A}
 		{F4A4AFE9-E566-4E20-822D-3B469ED95F65} = {FD130E39-1313-45CF-AA46-264869F9489A}
+		{80A305AB-6FF9-41EA-A4F6-10558423F9AC} = {7975515B-02BB-497A-8F18-E5254F0B446D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81F01917-143F-4D29-8845-4E9311D5EECA}
