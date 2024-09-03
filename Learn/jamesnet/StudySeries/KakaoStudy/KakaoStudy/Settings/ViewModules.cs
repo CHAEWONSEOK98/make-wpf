@@ -2,6 +2,7 @@
 using KakaoStudy.Core.Names;
 using KakaoStudy.Friends.UI.Views;
 using KakaoStudy.Login.UI.Views;
+using KakaoStudy.Main.UI.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 
@@ -35,6 +36,7 @@ namespace KakaoStudy.Settings
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IViewable, LoginContent>(ContentNameManager.Login);
+            containerRegistry.RegisterSingleton<IViewable, MainContent>(ContentNameManager.Main);
             containerRegistry.RegisterSingleton<IViewable, FriendsContent>(ContentNameManager.Friends);
         }
     }

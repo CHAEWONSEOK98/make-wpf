@@ -3,6 +3,7 @@
     public enum Contents
     {
         Login,
+        Main,
         Friends
     }
 }

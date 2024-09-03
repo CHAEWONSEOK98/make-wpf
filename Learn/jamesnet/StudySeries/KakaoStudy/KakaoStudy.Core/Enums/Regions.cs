@@ -2,6 +2,7 @@
 {
     public enum Regions
     {
-        MainRegion
+        MainRegion,
+        ContentRegion
     }
 }

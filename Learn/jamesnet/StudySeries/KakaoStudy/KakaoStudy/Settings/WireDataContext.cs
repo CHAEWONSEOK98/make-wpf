@@ -5,6 +5,8 @@ using KakaoStudy.Friends.Local.ViewModels;
 using KakaoStudy.Friends.UI.Views;
 using KakaoStudy.Login.Local.ViewModels;
 using KakaoStudy.Login.UI.Views;
+using KakaoStudy.Main.Local.ViewModels;
+using KakaoStudy.Main.UI.Views;
 
 namespace KakaoStudy.Settings
 {
@@ -19,6 +21,7 @@ namespace KakaoStudy.Settings
         {
             items.Register<KakaoWindow, KakaoViewModel>();
             items.Register<LoginContent, LoginContentViewModel>();
+            items.Register<MainContent, MainContentViewModel>();
             items.Register<FriendsContent, FriendsContentViewModel>();
         }
     }
