@@ -1,4 +1,6 @@
 ﻿using Jamesnet.Wpf.Global.Location;
+using KakaoStudy.Forms.Local.ViewModels;
+using KakaoStudy.Forms.UI.Views;
 using KakaoStudy.Friends.Local.ViewModels;
 using KakaoStudy.Friends.UI.Views;
 using KakaoStudy.Login.Local.ViewModels;
@@ -15,6 +17,7 @@ namespace KakaoStudy.Settings
         /// </summary>
         protected override void Match(ViewModelLocatorCollection items)
         {
+            items.Register<KakaoWindow, KakaoViewModel>();
             items.Register<LoginContent, LoginContentViewModel>();
             items.Register<FriendsContent, FriendsContentViewModel>();
         }

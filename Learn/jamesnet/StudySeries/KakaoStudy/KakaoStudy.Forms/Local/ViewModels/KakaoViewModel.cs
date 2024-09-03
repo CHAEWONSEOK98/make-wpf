@@ -1,24 +1,22 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using Jamesnet.Wpf.Controls;
-using Jamesnet.Wpf.Mvvm;
 using Prism.Ioc;
 using Prism.Regions;
 
-namespace KakaoStudy.Friends.Local.ViewModels
+namespace KakaoStudy.Forms.Local.ViewModels
 {
-    public partial class FriendsContentViewModel : ObservableBase
+    public class KakaoViewModel : IViewLoadable
     {
         private readonly IRegionManager _regionManager;
         private readonly IContainerProvider _containerProvider;
 
-        public FriendsContentViewModel(IRegionManager regionManager, IContainerProvider containerProvider)
+        public KakaoViewModel(IRegionManager regionManager, IContainerProvider containerProvider)
         {
             _regionManager = regionManager;
             _containerProvider = containerProvider;
         }
 
-        [RelayCommand]
-        private void Logout()
+        public void OnLoaded(IViewable view)
         {
             IRegion mainRegion = _regionManager.Regions["MainRegion"];
             IViewable loginContent = _containerProvider.Resolve<IViewable>("LoginContent");

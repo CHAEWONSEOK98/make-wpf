@@ -15,8 +15,8 @@ namespace KakaoStudy.Settings
         /// </summary>
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            IRegionManager regionManager = containerProvider.Resolve<IRegionManager>();
-            regionManager.RegisterViewWithRegion("MainRegion", "LoginContent");
+            //IRegionManager regionManager = containerProvider.Resolve<IRegionManager>();
+            //regionManager.RegisterViewWithRegion("MainRegion", "LoginContent");
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
