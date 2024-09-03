@@ -1,4 +1,5 @@
 ﻿using Jamesnet.Wpf.Controls;
+using KakaoStudy.Friends.UI.Views;
 using KakaoStudy.Login.UI.Views;
 using Prism.Ioc;
 using Prism.Modularity;
@@ -33,6 +34,7 @@ namespace KakaoStudy.Settings
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IViewable, LoginContent>("LoginContent");
+            containerRegistry.RegisterSingleton<IViewable, FriendsContent>("FriendsContent");
         }
     }
 }
