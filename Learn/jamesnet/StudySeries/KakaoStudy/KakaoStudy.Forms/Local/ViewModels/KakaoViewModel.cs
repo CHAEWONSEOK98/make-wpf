@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using Jamesnet.Wpf.Controls;
+using KakaoStudy.Core.Names;
 using Prism.Ioc;
 using Prism.Regions;
 
@@ -18,8 +19,8 @@ namespace KakaoStudy.Forms.Local.ViewModels
 
         public void OnLoaded(IViewable view)
         {
-            IRegion mainRegion = _regionManager.Regions["MainRegion"];
-            IViewable loginContent = _containerProvider.Resolve<IViewable>("LoginContent");
+            IRegion mainRegion = _regionManager.Regions[RegionNameManager.MainRegion];
+            IViewable loginContent = _containerProvider.Resolve<IViewable>(ContentNameManager.Login);
 
             if (!mainRegion.Views.Contains(loginContent))
             {
