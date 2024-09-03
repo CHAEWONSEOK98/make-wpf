@@ -1,4 +1,6 @@
 ﻿using Jamesnet.Wpf.Global.Location;
+using KakaoStudy.Chats.Local.ViewModels;
+using KakaoStudy.Chats.UI.Views;
 using KakaoStudy.Forms.Local.ViewModels;
 using KakaoStudy.Forms.UI.Views;
 using KakaoStudy.Friends.Local.ViewModels;
@@ -23,6 +25,7 @@ namespace KakaoStudy.Settings
             items.Register<LoginContent, LoginContentViewModel>();
             items.Register<MainContent, MainContentViewModel>();
             items.Register<FriendsContent, FriendsContentViewModel>();
+            items.Register<ChatsContent, ChatsContentViewModel>();
         }
     }
 }

@@ -4,6 +4,8 @@
     {
         Login,
         Main,
-        Friends
+        Friends,
+        Chats,
+        More,
     }
 }
