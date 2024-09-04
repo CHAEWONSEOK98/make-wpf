@@ -18,7 +18,7 @@
                             <TextBlock x:Name="placeholder"
                                        Foreground="#55423630"
                                        Margin="{TemplateBinding Padding}"
-                                       Visibility="Collapsed"
+                                       Visibility="Hidden"
                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                        Text="{TemplateBinding PlaceholderText}"/>
