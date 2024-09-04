@@ -25,11 +25,8 @@
                                 <birth:BirthdaysBoxItem>qqq</birth:BirthdaysBoxItem>
                             </birth:BirthdaysBox>
 
-                            <birth:BirthdaysBox Tag="Favorites">
-                                <favorite:FavoriteBoxItem>ppp</favorite:FavoriteBoxItem>
-                                <favorite:FavoriteBoxItem>ppp</favorite:FavoriteBoxItem>
-                                <favorite:FavoriteBoxItem>ppp</favorite:FavoriteBoxItem>
-                            </birth:BirthdaysBox>
+                            <favorite:FavoriteBox Tag="Favorites" 
+                                                  ItemsSource="{Binding Favorites}"/>
 
                             <Button Content="Logout"
                                     Margin="10"
