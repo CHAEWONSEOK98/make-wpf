@@ -13,21 +13,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Studio", "Studio", "{1A7D50
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Partial", "Partial", "{FD130E39-1313-45CF-AA46-264869F9489A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.Friends", "KakaoStudy.Friends\KakaoStudy.Friends.csproj", "{EEFFE23F-4775-4879-BA71-CB7F5E9155AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KakaoStudy.Friends", "KakaoStudy.Friends\KakaoStudy.Friends.csproj", "{EEFFE23F-4775-4879-BA71-CB7F5E9155AE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Based", "Based", "{2E8F3713-7D07-4862-91F7-0D9AEF58CF04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.Core", "KakaoStudy.Core\KakaoStudy.Core.csproj", "{1A2763CB-512D-4988-84D8-679444DCA5FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KakaoStudy.Core", "KakaoStudy.Core\KakaoStudy.Core.csproj", "{1A2763CB-512D-4988-84D8-679444DCA5FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.Main", "KakaoStudy.Main\KakaoStudy.Main.csproj", "{F21AAB26-BBB3-45BC-9ED5-2742F59BA3FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KakaoStudy.Main", "KakaoStudy.Main\KakaoStudy.Main.csproj", "{F21AAB26-BBB3-45BC-9ED5-2742F59BA3FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.Chats", "KakaoStudy.Chats\KakaoStudy.Chats.csproj", "{AED20BFE-367F-4486-95CC-ECC672E52B9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KakaoStudy.Chats", "KakaoStudy.Chats\KakaoStudy.Chats.csproj", "{AED20BFE-367F-4486-95CC-ECC672E52B9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.More", "KakaoStudy.More\KakaoStudy.More.csproj", "{F4A4AFE9-E566-4E20-822D-3B469ED95F65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KakaoStudy.More", "KakaoStudy.More\KakaoStudy.More.csproj", "{F4A4AFE9-E566-4E20-822D-3B469ED95F65}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{7975515B-02BB-497A-8F18-E5254F0B446D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.LayoutSupport", "KakaoStudy.LayoutSupport\KakaoStudy.LayoutSupport.csproj", "{80A305AB-6FF9-41EA-A4F6-10558423F9AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KakaoStudy.LayoutSupport", "KakaoStudy.LayoutSupport\KakaoStudy.LayoutSupport.csproj", "{80A305AB-6FF9-41EA-A4F6-10558423F9AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.Friends.Birth", "KakaoStudy.Friends.Birth\KakaoStudy.Friends.Birth.csproj", "{212E22EA-9E61-482A-BB2F-E189A5B9376D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Friends", "Friends", "{DFF3938C-91DE-494E-8AA7-357CBF524FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.Friends.Favorites", "KakaoStudy.Friends.Favorites\KakaoStudy.Friends.Favorites.csproj", "{61D77B25-BBFD-473F-AAE8-494107A993BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +77,14 @@ Global
 		{80A305AB-6FF9-41EA-A4F6-10558423F9AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80A305AB-6FF9-41EA-A4F6-10558423F9AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80A305AB-6FF9-41EA-A4F6-10558423F9AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{212E22EA-9E61-482A-BB2F-E189A5B9376D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{212E22EA-9E61-482A-BB2F-E189A5B9376D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{212E22EA-9E61-482A-BB2F-E189A5B9376D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{212E22EA-9E61-482A-BB2F-E189A5B9376D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D77B25-BBFD-473F-AAE8-494107A993BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D77B25-BBFD-473F-AAE8-494107A993BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D77B25-BBFD-473F-AAE8-494107A993BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D77B25-BBFD-473F-AAE8-494107A993BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +99,9 @@ Global
 		{AED20BFE-367F-4486-95CC-ECC672E52B9C} = {FD130E39-1313-45CF-AA46-264869F9489A}
 		{F4A4AFE9-E566-4E20-822D-3B469ED95F65} = {FD130E39-1313-45CF-AA46-264869F9489A}
 		{80A305AB-6FF9-41EA-A4F6-10558423F9AC} = {7975515B-02BB-497A-8F18-E5254F0B446D}
+		{212E22EA-9E61-482A-BB2F-E189A5B9376D} = {DFF3938C-91DE-494E-8AA7-357CBF524FC8}
+		{DFF3938C-91DE-494E-8AA7-357CBF524FC8} = {FD130E39-1313-45CF-AA46-264869F9489A}
+		{61D77B25-BBFD-473F-AAE8-494107A993BC} = {DFF3938C-91DE-494E-8AA7-357CBF524FC8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81F01917-143F-4D29-8845-4E9311D5EECA}

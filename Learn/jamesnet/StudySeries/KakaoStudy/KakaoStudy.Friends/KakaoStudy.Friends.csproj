@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KakaoStudy.Core\KakaoStudy.Core.csproj" />
+    <ProjectReference Include="..\KakaoStudy.Friends.Birth\KakaoStudy.Friends.Birth.csproj" />
+    <ProjectReference Include="..\KakaoStudy.Friends.Favorites\KakaoStudy.Friends.Favorites.csproj" />
   </ItemGroup>
 
 </Project>

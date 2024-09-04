@@ -6,5 +6,6 @@
         <ResourceDictionary Source="/KakaoStudy.LayoutSupport;component/Themes/Units/PlaceholderPasswordBox.xaml"/>
         <ResourceDictionary Source="/KakaoStudy.LayoutSupport;component/Themes/Units/PlaceholderTextBox.xaml"/>
         <ResourceDictionary Source="/KakaoStudy.LayoutSupport;component/Themes/Units/TaskBarButton.xaml"/>
+        <ResourceDictionary Source="/KakaoStudy.LayoutSupport;component/Themes/Units/FriendsBox.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
