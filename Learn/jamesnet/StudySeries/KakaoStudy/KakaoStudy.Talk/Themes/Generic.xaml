@@ -1,0 +1,8 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:KakaoStudy.Talk">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/KakaoStudy.Talk;component/Themes/Views/TalkWindow.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,4 +1,4 @@
-﻿using KakaoStudy.Settings;
+﻿using KakaoStudy.Properties;
 
 namespace KakaoStudy
 {
