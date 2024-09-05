@@ -31,7 +31,10 @@ namespace KakaoStudy.Properties
             items.Register<FriendsContent, FriendsContentViewModel>();
             items.Register<ChatsContent, ChatsContentViewModel>();
             items.Register<MoreContent, MoreContentViewModel>();
+
             items.Register<TalkWindow, TalkViewModel>();
+            items.Register<TalkContent, TalkContentViewModel>();
+
         }
     }
 }

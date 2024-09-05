@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KakaoStudy.Core\KakaoStudy.Core.csproj" />
+    <ProjectReference Include="..\KakaoStudy.LayoutSupport\KakaoStudy.LayoutSupport.csproj" />
   </ItemGroup>
 
 </Project>
