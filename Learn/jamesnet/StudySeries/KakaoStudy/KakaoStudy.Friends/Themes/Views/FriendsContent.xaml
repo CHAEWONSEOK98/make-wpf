@@ -25,7 +25,8 @@
                                 <birth:BirthdaysBoxItem>qqq</birth:BirthdaysBoxItem>
                             </birth:BirthdaysBox>
 
-                            <favorite:FavoriteBox Tag="Favorites" 
+                            <favorite:FavoriteBox Tag="Favorites"
+                                                  DoubleClickCommand="{Binding DoubleClickCommand}"
                                                   ItemsSource="{Binding Favorites}"/>
 
                             <Button Content="Logout"
