@@ -7,5 +7,6 @@
         Friends,
         Chats,
         More,
+        Simulator
     }
 }

@@ -18,6 +18,7 @@ namespace KakaoStudy
             base.RegisterTypes(containerRegistry);
 
             containerRegistry.RegisterInstance<TalkWindowManager>(new TalkWindowManager());
+            containerRegistry.RegisterInstance<ChatStorage>(new ChatStorage());
         }
     }
 }

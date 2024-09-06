@@ -39,9 +39,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pages", "Pages", "{67DDEC6C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Talks", "Talks", "{F1AC4059-8F6A-4A0B-82FA-887516875710}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.Talk", "KakaoStudy.Talk\KakaoStudy.Talk.csproj", "{BA8B17B4-9E5A-4393-8873-5F4753F755D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KakaoStudy.Talk", "KakaoStudy.Talk\KakaoStudy.Talk.csproj", "{BA8B17B4-9E5A-4393-8873-5F4753F755D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.Talk.TextMessage", "KakaoStudy.Talk.TextMessage\KakaoStudy.Talk.TextMessage.csproj", "{CAD26DCF-7612-443C-AEFA-3AEB97483420}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KakaoStudy.Talk.TextMessage", "KakaoStudy.Talk.TextMessage\KakaoStudy.Talk.TextMessage.csproj", "{CAD26DCF-7612-443C-AEFA-3AEB97483420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KakaoStudy.Tests", "KakaoStudy.Tests\KakaoStudy.Tests.csproj", "{D9A40976-D553-41B5-84A4-83C0FEA82107}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +103,10 @@ Global
 		{CAD26DCF-7612-443C-AEFA-3AEB97483420}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAD26DCF-7612-443C-AEFA-3AEB97483420}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAD26DCF-7612-443C-AEFA-3AEB97483420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9A40976-D553-41B5-84A4-83C0FEA82107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9A40976-D553-41B5-84A4-83C0FEA82107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9A40976-D553-41B5-84A4-83C0FEA82107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9A40976-D553-41B5-84A4-83C0FEA82107}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,6 +128,7 @@ Global
 		{F1AC4059-8F6A-4A0B-82FA-887516875710} = {FD130E39-1313-45CF-AA46-264869F9489A}
 		{BA8B17B4-9E5A-4393-8873-5F4753F755D1} = {F1AC4059-8F6A-4A0B-82FA-887516875710}
 		{CAD26DCF-7612-443C-AEFA-3AEB97483420} = {F1AC4059-8F6A-4A0B-82FA-887516875710}
+		{D9A40976-D553-41B5-84A4-83C0FEA82107} = {67DDEC6C-6C7B-4253-B9D1-DF6068D5BBBC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81F01917-143F-4D29-8845-4E9311D5EECA}

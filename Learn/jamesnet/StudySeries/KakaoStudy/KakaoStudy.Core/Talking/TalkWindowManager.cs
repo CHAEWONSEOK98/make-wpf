@@ -5,11 +5,17 @@ namespace KakaoStudy.Core.Talking
 {
     public class TalkWindowManager
     {
-        Dictionary<int, JamesWindow> _windows;
+        private Dictionary<int, JamesWindow> _windows;
+        public event EventHandler WindowCountChanged;
 
         public TalkWindowManager()
         {
             _windows = new();
+        }
+
+        public List<KeyValuePair<int, JamesWindow>> GetAllWindows()
+        {
+            return _windows.ToList();
         }
 
         public T ResolveWindow<T>(int id) where T : JamesWindow, new()
@@ -24,6 +30,8 @@ namespace KakaoStudy.Core.Talking
                 window.Closed += (s, e) => UnregisterWindow(id);
                 _windows.Add(id, window);
 
+                WindowCountChanged?.Invoke(this, EventArgs.Empty);
+
                 return window;
             }
         }
@@ -31,6 +39,7 @@ namespace KakaoStudy.Core.Talking
         private void UnregisterWindow(int id)
         {
             _windows.Remove(id);
+            WindowCountChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }
