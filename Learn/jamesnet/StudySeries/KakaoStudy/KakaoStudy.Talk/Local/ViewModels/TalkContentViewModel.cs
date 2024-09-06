@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Jamesnet.Wpf.Mvvm;
+using KakaoStudy.Core.Models;
+using System.Collections.ObjectModel;
 
 namespace KakaoStudy.Talk.Local.ViewModels
 {
@@ -9,14 +11,20 @@ namespace KakaoStudy.Talk.Local.ViewModels
         [ObservableProperty]
         private string _sendText;
 
+        [ObservableProperty]
+        private ObservableCollection<MessageModel> _chats;
+
         public TalkContentViewModel()
         {
             SendText = "";
+
+            Chats = new();
         }
 
         [RelayCommand]
         private void Send()
         {
+            Chats.Add(new MessageModel().DataGen("Send", SendText));
             SendText = "";
         }
     }

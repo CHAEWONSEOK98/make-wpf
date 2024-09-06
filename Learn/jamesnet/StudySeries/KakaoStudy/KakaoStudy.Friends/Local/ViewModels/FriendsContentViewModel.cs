@@ -15,6 +15,7 @@ namespace KakaoStudy.Friends.Local.ViewModels
         private readonly IRegionManager _regionManager;
         private readonly IContainerProvider _containerProvider;
 
+
         [ObservableProperty]
         private List<FriendsModel> _favorites;
 
@@ -43,7 +44,8 @@ namespace KakaoStudy.Friends.Local.ViewModels
             talkWindow.Title = data.Name;
             talkWindow.Width = 360;
             talkWindow.Height = 500;
-            talkWindow.ShowDialog();
+
+            talkWindow.Show();
         }
 
         [RelayCommand]
