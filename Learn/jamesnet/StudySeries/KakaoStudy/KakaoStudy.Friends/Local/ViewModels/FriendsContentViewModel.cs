@@ -4,6 +4,7 @@ using Jamesnet.Wpf.Controls;
 using Jamesnet.Wpf.Mvvm;
 using KakaoStudy.Core.Models;
 using KakaoStudy.Core.Names;
+using KakaoStudy.Core.Talking;
 using KakaoStudy.Talk.UI.Views;
 using Prism.Ioc;
 using Prism.Regions;
@@ -14,15 +15,16 @@ namespace KakaoStudy.Friends.Local.ViewModels
     {
         private readonly IRegionManager _regionManager;
         private readonly IContainerProvider _containerProvider;
-
+        private readonly TalkWindowManager _talkWindowManager;
 
         [ObservableProperty]
         private List<FriendsModel> _favorites;
 
-        public FriendsContentViewModel(IRegionManager regionManager, IContainerProvider containerProvider)
+        public FriendsContentViewModel(IRegionManager regionManager, IContainerProvider containerProvider, TalkWindowManager talkWindowManager)
         {
             _regionManager = regionManager;
             _containerProvider = containerProvider;
+            _talkWindowManager = talkWindowManager;
 
             Favorites = GetFavorites();
         }
@@ -40,7 +42,7 @@ namespace KakaoStudy.Friends.Local.ViewModels
         [RelayCommand]
         private void DoubleClick(FriendsModel data)
         {
-            TalkWindow talkWindow = new();
+            TalkWindow talkWindow = _talkWindowManager.ResolveWindow<TalkWindow>(data.Id);
             talkWindow.Title = data.Name;
             talkWindow.Width = 360;
             talkWindow.Height = 500;

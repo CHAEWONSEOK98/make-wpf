@@ -1,5 +1,7 @@
 ﻿using Jamesnet.Wpf.Controls;
+using KakaoStudy.Core.Talking;
 using KakaoStudy.Forms.UI.Views;
+using Prism.Ioc;
 using System.Windows;
 
 namespace KakaoStudy
@@ -9,6 +11,13 @@ namespace KakaoStudy
         protected override Window CreateShell()
         {
             return new KakaoWindow();
+        }
+
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            base.RegisterTypes(containerRegistry);
+
+            containerRegistry.RegisterInstance<TalkWindowManager>(new TalkWindowManager());
         }
     }
 }
