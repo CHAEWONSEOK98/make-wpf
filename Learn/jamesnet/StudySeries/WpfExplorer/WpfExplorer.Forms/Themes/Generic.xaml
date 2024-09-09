@@ -1,16 +1,9 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:based="clr-namespace:WpfExplorer.Support.UI.Units;assembly=WpfExplorer.Support"
-    xmlns:views="clr-namespace:WpfExplorer.Forms.UI.Views">
-
-
-    <Style TargetType="{x:Type views:ExplorerWinodw}" BasedOn="{StaticResource {x:Type based:DarkWindow}}">
-        <Setter Property="Content">
-            <Setter.Value>
-                <StackPanel>
-                </StackPanel>
-            </Setter.Value>
-        </Setter>
-    </Style>
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/WpfExplorer.Forms;component/Themes/Units/FolderTreeItem.xaml"/>
+        <ResourceDictionary Source="/WpfExplorer.Forms;component/Themes/Units/FolderTreeView.xaml"/>
+        <ResourceDictionary Source="/WpfExplorer.Forms;component/Themes/Views/ExplorerWindow.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
