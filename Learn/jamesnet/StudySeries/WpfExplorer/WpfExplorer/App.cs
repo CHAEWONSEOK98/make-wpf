@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using WpfExplorer.Forms.UI.Views;
-using WpfExplorer.Support.UI.Units;
 
 namespace WpfExplorer
 {
@@ -10,7 +9,7 @@ namespace WpfExplorer
         {
             base.OnStartup(e);
 
-            DarkWindow win = new DarkWindow();
+            ExplorerWinodw win = new ExplorerWinodw();
             win.Title = "James"; ;
             win.ShowDialog();
         }

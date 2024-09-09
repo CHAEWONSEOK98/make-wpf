@@ -1,9 +1,9 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
+using WpfExplorer.Support.UI.Units;
 
 namespace WpfExplorer.Forms.UI.Views
 {
-    public class ExplorerWinodw : Window
+    public class ExplorerWinodw : DarkWindow
     {
         static ExplorerWinodw()
         {
