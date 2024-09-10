@@ -1,12 +1,14 @@
-﻿namespace WpfExplorer.Forms.Local.ViewModels
+﻿using System.Windows;
+using WpfExplorer.Support.Local.Helpers;
+
+namespace WpfExplorer.Forms.Local.ViewModels
 {
     public class ExplorerViewModel
     {
-        public string TestMessage { get; set; }
 
-        public ExplorerViewModel()
+        public ExplorerViewModel(DirectoryManager directoryManager)
         {
-            TestMessage = "JamesViewModel";
+            
         }
     }
 }

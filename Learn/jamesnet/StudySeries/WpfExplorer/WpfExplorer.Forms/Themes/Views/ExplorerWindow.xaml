@@ -9,7 +9,7 @@
         <Setter Property="Content">
             <Setter.Value>
                 <StackPanel>
-                    <TextBlock Text="{Binding TestMessage}"/>
+                    <TextBlock Text="{Binding}"/>
                     <units:FolderTreeView>
                         <units:FolderTreeItem Header="FolderTreeItem"/>
                     </units:FolderTreeView>
