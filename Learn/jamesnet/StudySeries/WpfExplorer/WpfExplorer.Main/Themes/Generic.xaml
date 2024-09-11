@@ -2,6 +2,6 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/WpfExplorer.Forms;component/Themes/Views/ExplorerWindow.xaml"/>
+        <ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Views/MainContent.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
