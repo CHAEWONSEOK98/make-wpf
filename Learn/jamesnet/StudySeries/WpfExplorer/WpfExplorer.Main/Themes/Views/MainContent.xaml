@@ -8,11 +8,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:MainContent}">
-                    <units:FolderTreeView>
-                        <units:FolderTreeItem Header="James">
-                            
-                        </units:FolderTreeItem>
-                    </units:FolderTreeView>
+                    <units:FolderTreeView ItemsSource="{Binding Roots}"
+                                          SelectionCommand="{Binding FolderChangedCommand}"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
