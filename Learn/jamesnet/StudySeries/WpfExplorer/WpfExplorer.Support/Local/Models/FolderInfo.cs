@@ -10,6 +10,6 @@ namespace WpfExplorer.Support.Local.Models
         [ObservableProperty]
         private bool _isFolderSelected;
 
-        public ObservableCollection<FolderInfo> Children { get; set; }
+        public ObservableCollection<FolderInfo> Children { get; init; }
     }
 }

@@ -9,6 +9,8 @@ namespace WpfExplorer.Main.Local.ViewModels
 {
     public partial class MainContentViewModel : ObservableBase
     {
+        private readonly FileService _fileService;
+
         public List<FolderInfo> Roots { get; init; }
 
         /*
@@ -19,13 +21,14 @@ namespace WpfExplorer.Main.Local.ViewModels
 
         public MainContentViewModel(FileService fileService)
         {
+            _fileService = fileService;
             Roots = fileService.GenerateRootNodes();
         }
 
         [RelayCommand]
         private void FolderChanged(FolderInfo item)
         {
-            MessageBox.Show(item.Name);
+            _fileService.RefreshSubdirectories(item);
         }
     }
 }
