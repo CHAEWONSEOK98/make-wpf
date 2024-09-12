@@ -48,17 +48,33 @@ namespace WpfExplorer.Forms.Local.ViewModels
          * ExplorerWindow.xaml 에서 <ContentControl Content="{Binding Content}"/> 바인딩.
          * 
          */
+
         public void OnLoaded(IViewable view)
         {
-            IViewable main = _containerProvider.Resolve<IViewable>("MainContent");
-            IRegion mainRegion = _regionManager.Regions["MainRegion"];
+            //IViewable main = _containerProvider.Resolve<IViewable>("MainContent");
+            //IRegion mainRegion = _regionManager.Regions["MainRegion"];
 
-            // 모든 view들은 Views에 담겨 있으니, view가 담겨있지 않은 경우에만 view를 추가해준다.
-            if (!mainRegion.Views.Contains(main))
+            //// 모든 view들은 Views에 담겨 있으니, view가 담겨있지 않은 경우에만 view를 추가해준다.
+            //if (!mainRegion.Views.Contains(main))
+            //{
+            //    mainRegion.Add(main);
+            //}
+            //mainRegion.Activate(main);
+
+            ImportContent("MainContent", "MainRegion");
+            ImportContent("LocationContent", "LocationRegion");
+        }
+
+        private void ImportContent(string contentName, string regionName)
+        {
+            IViewable content = _containerProvider.Resolve<IViewable>(contentName);
+            IRegion region = _regionManager.Regions[regionName];
+
+            if (!region.Views.Contains(content))
             {
-                mainRegion.Add(main);
+                region.Add(content);
             }
-            mainRegion.Activate(main);
+            region.Activate(content);
         }
     }
 }
