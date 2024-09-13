@@ -12,10 +12,25 @@
                 <james:JamesRegion RegionName="LocationRegion"/>
             </Setter.Value>
         </Setter>
+        <!--<Setter Property="LocationTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <james:JamesRegion RegionName="LocationRegion"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>-->
+        
         <Setter Property="Content">
             <Setter.Value>
                 <james:JamesRegion RegionName="MainRegion"/>
             </Setter.Value>
         </Setter>
+        <!--<Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <james:JamesRegion RegionName="MainRegion"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>-->
     </Style>
 </ResourceDictionary>

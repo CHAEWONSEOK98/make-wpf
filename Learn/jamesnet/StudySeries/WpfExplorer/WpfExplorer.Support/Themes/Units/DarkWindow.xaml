@@ -48,9 +48,14 @@
                             <units:CloseButton Grid.Column="3"/>
 
                             <ContentPresenter ContentSource="Location"/>
+                            <!--<ContentPresenter ContentSource="Location"
+                                              ContentTemplate="{TemplateBinding LocationTemplate}"/>-->
 
                             <ContentPresenter Grid.Row="1" Grid.ColumnSpan="4"
                                               ContentSource="Content"/>
+                            <!--<ContentPresenter Grid.Row="1" Grid.ColumnSpan="4"
+                                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                                              ContentSource="Content"/>-->
                         </Grid>
                     </Border>
                 </ControlTemplate>

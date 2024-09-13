@@ -16,6 +16,15 @@ namespace WpfExplorer.Support.UI.Units
             set => SetValue(LocationProperty, value);
         }
 
+        public static DependencyProperty LocationTemplateProperty =
+DependencyProperty.Register("LocationTemplate", typeof(DataTemplate), typeof(DarkWindow), new PropertyMetadata());
+
+        public DataTemplate LocationTemplate
+        {
+            get => (DataTemplate)GetValue(LocationTemplateProperty);
+            set => SetValue(LocationTemplateProperty, value);
+        }
+
         static DarkWindow()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(DarkWindow), new FrameworkPropertyMetadata(typeof(DarkWindow)));
