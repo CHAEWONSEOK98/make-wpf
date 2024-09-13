@@ -3,14 +3,6 @@
                     xmlns:james="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf"
                     xmlns:units="clr-namespace:WpfExplorer.Main.UI.Units">
 
-    <Style TargetType="{x:Type james:JamesIcon}" x:Key="ChevronRight">
-        <Setter Property="Icon" Value="ChevronRight"/>
-        <Setter Property="Fill" Value="#666666"/>
-        <Setter Property="Margin" Value="10"/>
-        <Setter Property="Width" Value="15"/>
-        <Setter Property="Height" Value="15"/>
-    </Style>
-
     <Style TargetType="{x:Type units:ExpandButton}">
         <Setter Property="Foreground" Value="Blue"/>
         <Setter Property="Template">
@@ -18,7 +10,6 @@
                 <ControlTemplate TargetType="{x:Type units:ExpandButton}">
                     <Border Background="Transparent">
                         <james:JamesIcon x:Name="icon"
-                                         Style="{StaticResource ChevronRight}"
                                         Icon="ChevronRight"
                                         Fill="{TemplateBinding Foreground}"
                                          Margin="10 0 4 0"/>

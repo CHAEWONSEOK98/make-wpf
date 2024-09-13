@@ -1,4 +1,5 @@
-﻿using WpfExplorer.Support.Local.Models;
+﻿using System.IO;
+using WpfExplorer.Support.Local.Models;
 
 namespace WpfExplorer.Support.Local.Helpers
 {
@@ -7,6 +8,8 @@ namespace WpfExplorer.Support.Local.Helpers
         private FileInfoBase currentLocation;
         private Stack<Memento> backStack = new Stack<Memento>();
         private Stack<Memento> forwardStack = new Stack<Memento>();
+
+        public FileInfoBase Current => currentLocation;
 
         public event EventHandler<LocationChangedEventArgs> LocationChanged;
 
@@ -31,6 +34,23 @@ namespace WpfExplorer.Support.Local.Helpers
             if(backStack.Any())
             {
                 RestoreState(backStack, forwardStack);
+            }
+        }
+
+        public void GoForward()
+        {
+            if (forwardStack.Any())
+            {
+                RestoreState(forwardStack, backStack);
+            }
+        }
+
+        public void GoToParent()
+        {
+            DirectoryInfo parentDir = Directory.GetParent(currentLocation.FullPath);
+            if (parentDir != null)
+            {
+                ChangeLocation(new FileInfoBase { FullPath = parentDir.FullName });
             }
         }
 

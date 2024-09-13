@@ -25,9 +25,21 @@ namespace WpfExplorer.Location.Local.ViewModels
         }
 
         [RelayCommand]
-        private void GoBack()
+        public void Up()
+        {
+            _navigatorService.GoToParent();
+        }
+
+        [RelayCommand]
+        public void Undo()
         {
             _navigatorService.GoBack();
+        }
+
+        [RelayCommand]
+        public void Redo()
+        {
+            _navigatorService.GoForward();
         }
     }
 }

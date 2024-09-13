@@ -35,5 +35,15 @@ DependencyProperty.Register("LocationTemplate", typeof(DataTemplate), typeof(Dar
             WindowStyle = WindowStyle.None;
             AllowsTransparency = true;
         }
+
+        public override void OnApplyTemplate()
+        {
+            base.OnApplyTemplate();
+
+            if(GetTemplateChild("PART_CloseButton") is Button button)
+            {
+                button.Click += (s, e) => { Close(); };
+            }
+        }
     }
 }

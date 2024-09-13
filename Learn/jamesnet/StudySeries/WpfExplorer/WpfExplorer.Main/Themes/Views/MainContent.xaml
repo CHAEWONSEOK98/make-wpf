@@ -9,13 +9,20 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:MainContent}">
                     <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <units:FolderTreeView ItemsSource="{Binding Roots}"
-                                          SelectionCommand="{Binding FolderChangedCommand}"/>
-                        <DataGrid Grid.Column="1"
+                        <units:PolygonSelector Grid.ColumnSpan="2" ItemsSource="{Binding Locations}"/>
+                            
+                        <units:FolderTreeView Grid.Row="1"
+                                              ItemsSource="{Binding Roots}"
+                                              SelectionCommand="{Binding FolderChangedCommand}"/>
+                        <units:FileListBox Grid.Row="1" Grid.Column="1"
                                   ItemsSource="{Binding Files}"/>
                     </Grid>
                 </ControlTemplate>

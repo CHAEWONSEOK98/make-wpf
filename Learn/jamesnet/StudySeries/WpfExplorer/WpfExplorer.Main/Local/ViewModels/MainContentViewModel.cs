@@ -16,6 +16,7 @@ namespace WpfExplorer.Main.Local.ViewModels
 
         public List<FolderInfo> Roots { get; init; }
         public ObservableCollection<FolderInfo> Files { get; init; }
+        public ObservableCollection<LocationInfo> Locations { get; init; }
 
         /*
          * ViewModel에서 Roots는 바인딩을 해야 하니까 OnPropertyChanged 필요한데 지금 단계에서는 생성자에서 바로 만들어지므로 DataContext에 연결될 때 같이 바인딩 된다.
@@ -29,35 +30,40 @@ namespace WpfExplorer.Main.Local.ViewModels
             _navigatorService = navigatorService;
             Roots = fileService.GenerateRootNodes();
             Files = new();
+            Locations = new();
 
             _navigatorService.LocationChanged += _navigatorService_LocationChanged;
         }
 
         private void _navigatorService_LocationChanged(object? sender, LocationChangedEventArgs e)
         {
-            List<FolderInfo> source = GetDirectoryItems(e.Current.FullPath);
+            //임시
+            //List<FolderInfo> source = GetDirectoryItems(e.Current.FullPath);
+            //Files.Clear();
+            //Files.AddRange(source);
 
-            Files.Clear();
-            Files.AddRange(source);
+            _fileService.TryRefreshFiles(Files, out bool isDenied);
+            _fileService.RefreshLocations(Locations);
         }
 
-        private List<FolderInfo> GetDirectoryItems(string fullPath)
-        {
-            List<FolderInfo> items = new();
-            string[] dirs = Directory.GetDirectories(fullPath);
-            foreach (string path in dirs)
-            {
-                items.Add(new FolderInfo { FullPath = path });
-            }
+        // 임시
+        //private List<FolderInfo> GetDirectoryItems(string fullPath)
+        //{
+        //    List<FolderInfo> items = new();
+        //    string[] dirs = Directory.GetDirectories(fullPath);
+        //    foreach (string path in dirs)
+        //    {
+        //        items.Add(new FolderInfo { FullPath = path });
+        //    }
 
-            string[] files = Directory.GetFiles(fullPath);
-            foreach (string path in files)
-            {
-                items.Add(new FolderInfo { FullPath = path });
-            }
+        //    string[] files = Directory.GetFiles(fullPath);
+        //    foreach (string path in files)
+        //    {
+        //        items.Add(new FolderInfo { FullPath = path });
+        //    }
 
-            return items;
-        }
+        //    return items;
+        //}
 
         [RelayCommand]
         private void FolderChanged(FolderInfo item)
