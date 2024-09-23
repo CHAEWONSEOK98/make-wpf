@@ -16,9 +16,6 @@
             <DataTemplate DataType="{x:Type viewmodels:AccountViewModel}">
                 <views:AccountView/>
             </DataTemplate>
-            <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
-                <views:LoginView/>
-            </DataTemplate>
         </ContentControl.Resources>
     </ContentControl>
 </Window>
