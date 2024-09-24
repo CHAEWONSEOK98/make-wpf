@@ -8,9 +8,9 @@ namespace NavigationMVVM.Commands
     public class NavigateCommand<TViewModel> : CommandBase
         where TViewModel : ViewModelBase
     {
-        private readonly INavigationService<TViewModel> _navigationService;
+        private readonly NavigationService<TViewModel> _navigationService;
 
-        public NavigateCommand(INavigationService<TViewModel> navigationService)
+        public NavigateCommand(NavigationService<TViewModel> navigationService)
         {
             _navigationService = navigationService;
         }
