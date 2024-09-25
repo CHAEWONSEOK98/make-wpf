@@ -2,22 +2,29 @@
 
 namespace NavigationMVVM.Stores
 {
-    public class NavigationStore
+    public class ModalNavigationStore
     {
-		private ViewModelBase _currentViewModel;
+        private ViewModelBase _currentViewModel;
 
-		public ViewModelBase CurrentViewModel
+        public ViewModelBase CurrentViewModel
         {
-			get => _currentViewModel;
+            get => _currentViewModel;
             set
-			{
+            {
                 _currentViewModel?.Dispose();
                 _currentViewModel = value;
                 OnCurrentViewModelChanged();
             }
-		}
+        }
+
+        public bool IsModalOpen => CurrentViewModel != null;
 
         public event Action CurrrentViewModelChanged;
+
+        public void Close()
+        {
+            CurrentViewModel = null;
+        }
 
         private void OnCurrentViewModelChanged()
         {
