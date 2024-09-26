@@ -4,5 +4,6 @@
     xmlns:local="clr-namespace:AnalogClock">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/CustomControls/AnalogClockStyle.xaml"/>
+        <ResourceDictionary Source="/CustomControls/DigitalClockStyle.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

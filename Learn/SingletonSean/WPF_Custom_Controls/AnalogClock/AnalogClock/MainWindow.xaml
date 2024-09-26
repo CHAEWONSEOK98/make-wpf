@@ -12,6 +12,8 @@
         <custom:AnalogClock 
             ShowSeconds="True"
             TimeChanged="AnalogClock_TimeChanged"/>
-        <TextBlock x:Name="tbTime" Text="00:00:00" Margin="10" FontSize="50"/>
+        <custom:DigitalClock ShowSeconds="False"
+                             ColonBlink="False"
+                             HorizontalAlignment="Center" Margin="10" FontSize="50"/>
     </StackPanel>
 </Window>

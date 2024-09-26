@@ -9,32 +9,14 @@ namespace AnalogClock.CustomControls
 {
     public delegate void TimeChangedEventHandler(object sender, TimeChangedEventArgs args);
 
-    public class AnalogClock : Control
+    [TemplatePart(Name = "PART_HourHand", Type = typeof(Line))]
+    [TemplatePart(Name = "PART_MinuteHand", Type = typeof(Line))]
+    [TemplatePart(Name = "PART_SecondHand", Type = typeof(Line))]
+    public class AnalogClock : Clock
     {
         private Line hourHand;
         private Line minuteHand;
         private Line secondHand;
-
-        public static DependencyProperty ShowSecondsProperty = DependencyProperty.Register("ShowSeconds", typeof(bool), typeof(AnalogClock), new PropertyMetadata(true));
-        public static RoutedEvent TimeChangedEvent = EventManager.RegisterRoutedEvent("TimeChanged", RoutingStrategy.Bubble, typeof(RoutedPropertyChangedEventHandler<DateTime>), typeof(AnalogClock));
-
-        public bool ShowSeconds
-        {
-            get { return (bool)GetValue(ShowSecondsProperty); }
-            set { SetValue(ShowSecondsProperty, value); }
-        }
-
-        public event RoutedPropertyChangedEventHandler<DateTime> TimeChanged
-        {
-            add
-            {
-                AddHandler(TimeChangedEvent, value);
-            }
-            remove
-            {
-                RemoveHandler(TimeChangedEvent, value);
-            }
-        }
 
         static AnalogClock()
         {
@@ -58,42 +40,13 @@ namespace AnalogClock.CustomControls
             //secondHand.SetBinding(VisibilityProperty, showSecondHandBinding); 
             #endregion
 
-            UpdateHandAngles(DateTime.Now);
-
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 1);
-            timer.Tick += (s, e) => OnTimeChanged(DateTime.Now);
-            timer.Start();
-
             base.OnApplyTemplate();
         }
 
-        protected virtual void OnTimeChanged(DateTime time)
+        protected override void OnTimeChanged(DateTime time)
         {
             UpdateHandAngles(time);
-            UpdateTimeState(time);
-
-            // 이벤트 발생
-            RaiseEvent(new RoutedPropertyChangedEventArgs<DateTime>(DateTime.Now.AddSeconds(-1), DateTime.Now, TimeChangedEvent));
-        }
-
-        private void UpdateTimeState(DateTime time)
-        {
-            if(time.Day == 25 && time.Month == 12)
-            {
-                VisualStateManager.GoToState(this, "Christmas", false);
-            }
-            else
-            {
-                if (time.Hour > 6 && time.Hour < 18)
-                {
-                    VisualStateManager.GoToState(this, "Day", false);
-                }
-                else
-                {
-                    VisualStateManager.GoToState(this, "Night", false);
-                }
-            }
+            base.OnTimeChanged(time);
         }
 
         private void UpdateHandAngles(DateTime time)
