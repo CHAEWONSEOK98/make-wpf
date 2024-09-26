@@ -71,9 +71,29 @@ namespace AnalogClock.CustomControls
         protected virtual void OnTimeChanged(DateTime time)
         {
             UpdateHandAngles(time);
+            UpdateTimeState(time);
 
             // 이벤트 발생
             RaiseEvent(new RoutedPropertyChangedEventArgs<DateTime>(DateTime.Now.AddSeconds(-1), DateTime.Now, TimeChangedEvent));
+        }
+
+        private void UpdateTimeState(DateTime time)
+        {
+            if(time.Day == 25 && time.Month == 12)
+            {
+                VisualStateManager.GoToState(this, "Christmas", false);
+            }
+            else
+            {
+                if (time.Hour > 6 && time.Hour < 18)
+                {
+                    VisualStateManager.GoToState(this, "Day", false);
+                }
+                else
+                {
+                    VisualStateManager.GoToState(this, "Night", false);
+                }
+            }
         }
 
         private void UpdateHandAngles(DateTime time)
