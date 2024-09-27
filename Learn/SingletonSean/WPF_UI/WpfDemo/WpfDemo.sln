@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDemo", "WpfDemo\WpfDemo.csproj", "{3E981D6B-57A5-41FB-A56D-B43A13171B68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfDemo", "WpfDemo\WpfDemo.csproj", "{3E981D6B-57A5-41FB-A56D-B43A13171B68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighlightTextBlockControl", "HighlightTextBlockControl\HighlightTextBlockControl.csproj", "{E3C97D6A-CE5E-4E9E-89FC-B9C84656B1AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighlightTextBlockControl", "HighlightTextBlockControl\HighlightTextBlockControl.csproj", "{E3C97D6A-CE5E-4E9E-89FC-B9C84656B1AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadingSpinnerControl", "LoadingSpinnerControl\LoadingSpinnerControl.csproj", "{D0D8C1CC-41D4-4A50-BC26-AD1BAFB41004}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E3C97D6A-CE5E-4E9E-89FC-B9C84656B1AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3C97D6A-CE5E-4E9E-89FC-B9C84656B1AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3C97D6A-CE5E-4E9E-89FC-B9C84656B1AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0D8C1CC-41D4-4A50-BC26-AD1BAFB41004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D8C1CC-41D4-4A50-BC26-AD1BAFB41004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D8C1CC-41D4-4A50-BC26-AD1BAFB41004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D8C1CC-41D4-4A50-BC26-AD1BAFB41004}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

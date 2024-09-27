@@ -7,7 +7,7 @@ namespace WpfDemo
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new HighlightTextBlockDemoWindow();
+            MainWindow = new LoadingSpinnerDemoWindow();
             MainWindow.Show();
 
             base.OnStartup(e);
