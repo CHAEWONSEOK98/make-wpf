@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDemo", "WpfDemo\WpfDemo.csproj", "{3E981D6B-57A5-41FB-A56D-B43A13171B68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighlightTextBlockControl", "HighlightTextBlockControl\HighlightTextBlockControl.csproj", "{E3C97D6A-CE5E-4E9E-89FC-B9C84656B1AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E981D6B-57A5-41FB-A56D-B43A13171B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E981D6B-57A5-41FB-A56D-B43A13171B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E981D6B-57A5-41FB-A56D-B43A13171B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E981D6B-57A5-41FB-A56D-B43A13171B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3C97D6A-CE5E-4E9E-89FC-B9C84656B1AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3C97D6A-CE5E-4E9E-89FC-B9C84656B1AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3C97D6A-CE5E-4E9E-89FC-B9C84656B1AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3C97D6A-CE5E-4E9E-89FC-B9C84656B1AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2E916DA-106E-44EF-A2A5-FAED032373C3}
+	EndGlobalSection
+EndGlobal
