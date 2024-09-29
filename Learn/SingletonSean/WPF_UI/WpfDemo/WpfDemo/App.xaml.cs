@@ -7,7 +7,7 @@ namespace WpfDemo
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new LoadingSpinnerDemoWindow();
+            MainWindow = new PlaceholderTextBoxDemoWindow();
             MainWindow.Show();
 
             base.OnStartup(e);
