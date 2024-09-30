@@ -7,7 +7,7 @@ namespace WpfDemo
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new PlaceholderTextBoxDemoWindow();
+            MainWindow = new DropdownMenuDemoWindow();
             MainWindow.Show();
 
             base.OnStartup(e);
