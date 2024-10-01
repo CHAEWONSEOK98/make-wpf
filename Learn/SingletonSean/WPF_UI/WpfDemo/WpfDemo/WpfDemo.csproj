@@ -12,6 +12,7 @@
     <ProjectReference Include="..\DropdownMenuControl\DropdownMenuControl.csproj" />
     <ProjectReference Include="..\HighlightTextBlockControl\HighlightTextBlockControl.csproj" />
     <ProjectReference Include="..\LoadingSpinnerControl\LoadingSpinnerControl.csproj" />
+    <ProjectReference Include="..\ModalControl\ModalControl.csproj" />
     <ProjectReference Include="..\PlaceholderTextBoxControl\PlaceholderTextBoxControl.csproj" />
   </ItemGroup>
 
