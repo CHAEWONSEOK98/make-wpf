@@ -9,11 +9,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="800">
     <StackPanel HorizontalAlignment="Center">
-        <custom:AnalogClock 
+        <!--<custom:AnalogClock 
             ShowSeconds="True"
             TimeChanged="AnalogClock_TimeChanged"/>
         <custom:DigitalClock ShowSeconds="False"
                              ColonBlink="False"
-                             HorizontalAlignment="Center" Margin="10" FontSize="50"/>
+                             HorizontalAlignment="Center" Margin="10" FontSize="50"/>-->
+        <custom:ControllableClock>
+            <custom:ControllableClock.Clock>
+                <custom:AnalogClock FontSize="48"/>
+            </custom:ControllableClock.Clock>
+        </custom:ControllableClock>
     </StackPanel>
 </Window>
