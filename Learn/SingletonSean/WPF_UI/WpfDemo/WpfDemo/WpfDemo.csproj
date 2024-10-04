@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DropdownMenuControl\DropdownMenuControl.csproj" />
+    <ProjectReference Include="..\HamburgerMenuControl\HamburgerMenuControl.csproj" />
     <ProjectReference Include="..\HighlightTextBlockControl\HighlightTextBlockControl.csproj" />
     <ProjectReference Include="..\LoadingSpinnerControl\LoadingSpinnerControl.csproj" />
     <ProjectReference Include="..\ModalControl\ModalControl.csproj" />

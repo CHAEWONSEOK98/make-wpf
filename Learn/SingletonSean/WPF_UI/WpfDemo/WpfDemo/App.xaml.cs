@@ -7,7 +7,7 @@ namespace WpfDemo
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new ModalDemoWindow();
+            MainWindow = new HamburgerMenuDemoWindow();
             MainWindow.Show();
 
             base.OnStartup(e);
