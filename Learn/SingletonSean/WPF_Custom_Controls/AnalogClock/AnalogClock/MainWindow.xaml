@@ -8,17 +8,24 @@
         xmlns:custom="clr-namespace:AnalogClock.CustomControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="800">
-    <StackPanel HorizontalAlignment="Center">
-        <!--<custom:AnalogClock 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        
+        <custom:AnalogClock
+            Grid.Row="0"
             ShowSeconds="True"
             TimeChanged="AnalogClock_TimeChanged"/>
-        <custom:DigitalClock ShowSeconds="False"
+        <custom:DigitalClock Grid.Row="1"
+                             ShowSeconds="True"
                              ColonBlink="False"
-                             HorizontalAlignment="Center" Margin="10" FontSize="50"/>-->
-        <custom:ControllableClock>
+                             HorizontalAlignment="Center" Margin="10" FontSize="50"/>
+        <!--<custom:ControllableClock>
             <custom:ControllableClock.Clock>
                 <custom:AnalogClock FontSize="48"/>
             </custom:ControllableClock.Clock>
-        </custom:ControllableClock>
-    </StackPanel>
+        </custom:ControllableClock>-->
+    </Grid>
 </Window>

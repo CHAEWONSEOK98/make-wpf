@@ -11,37 +11,37 @@ namespace AnalogClock.CustomControls
     [TemplateVisualState(Name = "Christmas", GroupName = "TimeStates")]
     public class Clock : Control
     {
-        public static readonly DependencyProperty TimeProperty = DependencyProperty.Register("Time", typeof(DateTime), typeof(Clock), new PropertyMetadata(DateTime.Now, TimePropertyChanged, TimeCoerceValue));
+        public static readonly DependencyProperty TimeProperty = DependencyProperty.Register("Time", typeof(DateTime), typeof(Clock), new PropertyMetadata(DateTime.Now, TimePropertyChanged));
 
-        private static object TimeCoerceValue(DependencyObject d, object baseValue)
-        {
-            if(baseValue is DateTime)
-            {
-                DateTime time = (DateTime)baseValue;
+        //private static object TimeCoerceValue(DependencyObject d, object baseValue)
+        //{
+        //    if(baseValue is DateTime)
+        //    {
+        //        DateTime time = (DateTime)baseValue;
 
-                if(time.Second % 2 == 1)
-                {
-                    baseValue = time.AddSeconds(1);
-                }
-            }
+        //        if(time.Second % 2 == 1)
+        //        {
+        //            baseValue = time.AddSeconds(1);
+        //        }
+        //    }
 
-            return baseValue;
-        }
+        //    return baseValue;
+        //}
 
-        private static bool TimeValidateValue(object value)
-        {
-            if(value is DateTime)
-            {
-                DateTime time = (DateTime)value;
+        //private static bool TimeValidateValue(object value)
+        //{
+        //    if(value is DateTime)
+        //    {
+        //        DateTime time = (DateTime)value;
 
-                if(time.Second % 2 == 1)
-                {
-                    return false;
-                }
-            }
+        //        if(time.Second % 2 == 1)
+        //        {
+        //            return false;
+        //        }
+        //    }
 
-            return true;
-        }
+        //    return true;
+        //}
 
         private static void TimePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
