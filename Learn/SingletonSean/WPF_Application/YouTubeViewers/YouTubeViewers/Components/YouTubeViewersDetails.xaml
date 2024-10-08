@@ -21,7 +21,7 @@
 
                 <TextBlock Grid.Row="0"
                            FontSize="24"
-                           Text="SingletonSean"/>
+                           Text="{Binding Username}"/>
 
                 <Grid Grid.Row="1" Margin="0 20 0 0">
                     <Grid.ColumnDefinitions>
@@ -35,8 +35,8 @@
                                Text="Is Subscribed?"/>
 
                     <TextBlock Grid.Column="1"
-                               Text="Yes"
-                               Margin="20 0 0 0"/>
+                               Margin="20 0 0 0"
+                               Text="{Binding IsSubscribedDisplay}"/>
                 </Grid>
 
                 <Grid Grid.Row="2" Margin="0 20 0 0">
@@ -51,8 +51,8 @@
                                Text="Is Member?"/>
 
                     <TextBlock Grid.Column="1"
-                               Text="Yes"
-                               Margin="20 0 0 0"/>
+                               Margin="20 0 0 0"
+                               Text="{Binding IsMemberDisplay}"/>
                 </Grid>
             </Grid>
         </Border>
