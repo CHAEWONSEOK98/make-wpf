@@ -10,7 +10,7 @@ namespace YouTubeViewers.ViewModels
 
         public AddYouTubeViewerViewModel(ModalNavigationStore modalNavigationStore)
         {
-            ICommand submitCommand = null;
+            ICommand submitCommand = new AddYouTubeViewerCommand(modalNavigationStore);
             ICommand cancelCommand = new CloseModalCommand(modalNavigationStore);
             YouTubeViewerDetailsFormViewModel = new YouTubeViewerDetailsFormViewModel(submitCommand, cancelCommand);
         }
