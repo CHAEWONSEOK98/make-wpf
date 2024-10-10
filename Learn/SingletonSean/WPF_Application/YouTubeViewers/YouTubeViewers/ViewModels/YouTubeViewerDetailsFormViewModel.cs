@@ -30,7 +30,7 @@ namespace YouTubeViewers.ViewModels
 
 		private bool _isMember;
 
-		public bool IsMember
+        public bool IsMember
 		{
 			get { return _isMember; }
 			set 
@@ -45,5 +45,11 @@ namespace YouTubeViewers.ViewModels
 		public ICommand SubmitCommand { get; }
 
 		public ICommand CancelCommand { get; }
-	}
+
+        public YouTubeViewerDetailsFormViewModel(ICommand submitCommand, ICommand cancelCommand)
+        {
+            SubmitCommand = submitCommand;
+            CancelCommand = cancelCommand;
+        }
+    }
 }

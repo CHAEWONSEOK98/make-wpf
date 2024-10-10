@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using YouTubeViewers.Command;
 using YouTubeViewers.Stores;
 
 namespace YouTubeViewers.ViewModels
@@ -11,10 +12,12 @@ namespace YouTubeViewers.ViewModels
 
         public ICommand AddYouTubeViewersCommand { get; }
 
-        public YouTubeViewersViewModel(SelectedYouTubeViewerStore selectedYouTubeViewerStore)
+        public YouTubeViewersViewModel(SelectedYouTubeViewerStore selectedYouTubeViewerStore, ModalNavigationStore modalNavigationStore)
         {
-            YouTubeViewersListingViewModel = new YouTubeViewersListingViewModel(selectedYouTubeViewerStore);
+            YouTubeViewersListingViewModel = new YouTubeViewersListingViewModel(selectedYouTubeViewerStore, modalNavigationStore);
             YouTubeViewersDetailsViewModel = new YouTubeViewersDetailsViewModel(selectedYouTubeViewerStore);
+
+            AddYouTubeViewersCommand = new OpenAddYouTubeViewerCommand(modalNavigationStore);
         }
     }
 }

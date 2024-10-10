@@ -1,12 +1,23 @@
-﻿namespace YouTubeViewers.ViewModels
+﻿using System.Windows.Input;
+using YouTubeViewers.Command;
+using YouTubeViewers.Models;
+using YouTubeViewers.Stores;
+
+namespace YouTubeViewers.ViewModels
 {
     public class EditYouTubeViewerViewModel : ViewModelBase
     {
         public YouTubeViewerDetailsFormViewModel YouTubeViewerDetailsFormViewModel { get; }
 
-        public EditYouTubeViewerViewModel()
+        public EditYouTubeViewerViewModel(YouTubeViewer youTubeViewer, ModalNavigationStore modalNavigationStore)
         {
-            YouTubeViewerDetailsFormViewModel = new YouTubeViewerDetailsFormViewModel();
+            ICommand cancelCommand = new CloseModalCommand(modalNavigationStore);
+            YouTubeViewerDetailsFormViewModel = new YouTubeViewerDetailsFormViewModel(null, cancelCommand)
+            {
+                Username = youTubeViewer.Username,
+                IsSubscribed = youTubeViewer.IsSubscribed,
+                IsMember = youTubeViewer.IsMember,
+            };
         }
     }
 }

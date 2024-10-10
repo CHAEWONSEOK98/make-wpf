@@ -13,9 +13,10 @@ namespace YouTubeViewers.ViewModels
 
         public ICommand DeleteCommand { get; }
 
-        public YouTubeViewersListingItemViewModel(YouTubeViewer youTubeViewer)
+        public YouTubeViewersListingItemViewModel(YouTubeViewer youTubeViewer, ICommand editCommand)
         {
             YouTubeViewer = youTubeViewer;
+            EditCommand = editCommand;
         }
     }
 }
