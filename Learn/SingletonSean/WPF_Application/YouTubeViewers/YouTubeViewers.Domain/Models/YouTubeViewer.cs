@@ -1,4 +1,4 @@
-﻿namespace YouTubeViewers.Models
+﻿namespace YouTubeViewers.Domain.Models
 {
     public class YouTubeViewer
     {

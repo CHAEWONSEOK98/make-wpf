@@ -1,4 +1,4 @@
-﻿using YouTubeViewers.Models;
+﻿using YouTubeViewers.Domain.Models;
 using YouTubeViewers.Stores;
 
 namespace YouTubeViewers.ViewModels

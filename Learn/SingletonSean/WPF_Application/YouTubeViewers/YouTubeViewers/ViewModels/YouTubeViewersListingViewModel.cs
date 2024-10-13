@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using YouTubeViewers.Command;
-using YouTubeViewers.Models;
+using YouTubeViewers.Domain.Models;
 using YouTubeViewers.Stores;
 
 namespace YouTubeViewers.ViewModels
