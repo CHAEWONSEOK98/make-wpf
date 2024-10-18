@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSlidePanel", "WpfSlidePanel\WpfSlidePanel.csproj", "{B082A607-691B-42B0-82B1-B09C39769B16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfSlidePanel", "WpfSlidePanel\WpfSlidePanel.csproj", "{B082A607-691B-42B0-82B1-B09C39769B16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfControls", "WpfControls\WpfControls.csproj", "{9FE7EB0A-68FA-423E-AF2E-7A5D389C3B5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B082A607-691B-42B0-82B1-B09C39769B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B082A607-691B-42B0-82B1-B09C39769B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B082A607-691B-42B0-82B1-B09C39769B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE7EB0A-68FA-423E-AF2E-7A5D389C3B5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE7EB0A-68FA-423E-AF2E-7A5D389C3B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE7EB0A-68FA-423E-AF2E-7A5D389C3B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE7EB0A-68FA-423E-AF2E-7A5D389C3B5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

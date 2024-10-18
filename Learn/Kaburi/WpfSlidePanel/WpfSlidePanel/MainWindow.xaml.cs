@@ -13,9 +13,11 @@ namespace WpfSlidePanel
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Panel.SetZIndex(slidePanel, int.MaxValue);
-            Storyboard storyboard = (Storyboard)this.Resources["OpenStoryboard"];
-            storyboard.Begin();
+            //Panel.SetZIndex(slidePanel, int.MaxValue);
+            //Storyboard storyboard = (Storyboard)this.Resources["OpenStoryboard"];
+            //storyboard.Begin();
+
+            slidePanel.Open();
         }
 
         private void opacityGrid_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -27,7 +29,7 @@ namespace WpfSlidePanel
 
         private void Storyboard_Completed(object? sender, EventArgs e)
         {
-            Panel.SetZIndex(slidePanel, int.MinValue);
+            //Panel.SetZIndex(slidePanel, int.MinValue);
         }
     }
 }

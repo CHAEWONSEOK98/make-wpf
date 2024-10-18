@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfSlidePanel"
+        xmlns:controls="clr-namespace:WpfControls.Controls;assembly=WpfControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Window.Resources>
+    <!--<Window.Resources>
         <Storyboard x:Key="OpenStoryboard">
             <DoubleAnimation Storyboard.TargetName="slider"
                              Storyboard.TargetProperty="(Canvas.Left)"
@@ -21,20 +22,24 @@
                              To="-300"
                              Duration="0:0:0.3"/>
         </Storyboard>
-    </Window.Resources>
+    </Window.Resources>-->
     <Grid x:Name="parent">
         <!--SlidePanel-->
-        <Grid x:Name="slidePanel">
+        <!--<Grid x:Name="slidePanel">
             <Grid x:Name="opacityGrid" Background="LightGray" Opacity="0.3" MouseUp="opacityGrid_MouseUp"/>
             <Canvas>
                 <Border x:Name="slider" Canvas.Left="-300"
                         Width="300" Height="{Binding ActualHeight, ElementName=parent}" Background="White">
-                    <!--Content-->
+                    --><!--Content--><!--
                     
                 </Border>
             </Canvas>
-        </Grid>
-        
+        </Grid>-->
+        <controls:SlidePanel x:Name="slidePanel"
+                             SliderWidth="500"
+                             AnimationSpeed="300"
+                             SliderLocation="Right"/>
+
         <!--Body-->
         <Grid Background="#F8F8F8">
             <Grid.RowDefinitions>
